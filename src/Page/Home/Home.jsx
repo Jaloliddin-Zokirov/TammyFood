@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import About from "../../Components/About/About";
 import Menu from "../../Components/Menu/Menu";
 import Contact from "../../Components/Contact/Contact";
-import Deliver from "../../Components/Target/Target";
+import Deliver from "../../Components/Deliver/Deliver";
+import { scrollToTop } from "../../until";
 
 const Home = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <>
       <section className="relative py-[120px]" id="Home">

@@ -18,13 +18,13 @@ const Header = () => {
                   : "border-[transparent]"
               } text-[#3C3C3C] border-b-[3px] hover:border-[#FCC647] hover:text-[#FCC647] cursor-pointer`}
             >
-              <a
+              <Link
+                to={"/"}
                 className=" text-[20px] font-bold"
-                href="#Home"
                 onClick={() => setActive("home")}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li
               className={`${

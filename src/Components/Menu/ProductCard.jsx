@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { scrollToTop } from "../../until";
 
-const ProductCard = ({ id, img, title, text, price }) => {
+const ProductCard = ({ id, img, title, text }) => {
   const maxLength = 67; // "Beef is the culinary name for meat from cattle, particularly skeletal muscle." uzunligi
   const truncatedText =
     text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <li
@@ -21,15 +27,15 @@ const ProductCard = ({ id, img, title, text, price }) => {
         <h4 className="mb-[13px] text-[#3C3C3C] text-[18px] font-bold">
           {title}
         </h4>
-        <p className="mb-[12px] text-[#667085] text-[12px] font-normal">
+        <p className="mb-[28px] text-[#667085] text-[12px] font-normal">
           {truncatedText}
         </p>
-        <div className="flex items-center justify-between">
-          <p className="text-[#3C3C3C] text-[16px] font-semibold">{price}</p>
-          <button className="cursor-pointer">
-            <img src="karzinka.svg" alt={title} />
-          </button>
-        </div>
+        <Link
+          to={title}
+          className="py-[6px] px-[16px] rounded-md bg-[#FCC647] text-[#FFF] text-[16px] font-semibold"
+        >
+          More
+        </Link>
       </div>
     </li>
   );

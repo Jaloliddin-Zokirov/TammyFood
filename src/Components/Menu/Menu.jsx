@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import { scrollToTop } from "../../until";
 
 const Menu = () => {
   const [data, setData] = useState([]);
@@ -24,6 +25,10 @@ const Menu = () => {
     };
 
     fetchData();
+  }, []);
+
+  useEffect(() => {
+    scrollToTop();
   }, []);
 
   // Sahifaga qarab ma'lumotni kesib olish
@@ -61,7 +66,6 @@ const Menu = () => {
                   img={el.strCategoryThumb}
                   title={el.strCategory}
                   text={el.strCategoryDescription}
-                  price={25}
                 />
               ))}
             </ul>
