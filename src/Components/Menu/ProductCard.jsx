@@ -1,10 +1,10 @@
 import React from "react";
 
 const ProductCard = ({ id, img, title, text, price }) => {
-    const maxLength = 67; // "Beef is the culinary name for meat from cattle, particularly skeletal muscle." uzunligi
-    const truncatedText =
-      text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
-  
+  const maxLength = 67; // "Beef is the culinary name for meat from cattle, particularly skeletal muscle." uzunligi
+  const truncatedText =
+    text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
+
   return (
     <li
       className="flex flex-col items-center w-full max-w-[273px] py-[15px] px-[22px]"

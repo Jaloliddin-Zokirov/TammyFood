@@ -2,6 +2,7 @@ import React from "react";
 import About from "../../Components/About/About";
 import Menu from "../../Components/Menu/Menu";
 import Contact from "../../Components/Contact/Contact";
+import Deliver from "../../Components/Target/Target";
 
 const Home = () => {
   return (
@@ -23,9 +24,12 @@ const Home = () => {
                 text ever since the 1500s.
               </p>
               <div>
-                <button className="py-[15px] px-[25px] bg-[#FFC12F] rounded-[48px] text-white font-medium text-[19px] cursor-pointer">
+                <a
+                  className="py-[15px] px-[25px] bg-[#FFC12F] rounded-[48px] text-white font-medium text-[19px] cursor-pointer inline-block"
+                  href="#Menu"
+                >
                   Get Started
-                </button>
+                </a>
               </div>
             </div>
             <div>
@@ -45,6 +49,7 @@ const Home = () => {
       </section>
       <About />
       <Menu />
+      <Deliver />
       <Contact />
     </>
   );
